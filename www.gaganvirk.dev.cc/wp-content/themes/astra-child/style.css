@@ -11,6 +11,11 @@ Updated: 2020-07-08 07:25:21
 
 */
 
+.content-area {
+	margin-top: 20%;
+	background--color: red;
+}
+
 .content-area  {
 	width: 100% !important;
 }
