@@ -18,6 +18,13 @@ while (have_posts()) {
         </div>
 
    	<div class="generic-content"><?php the_content(); ?></div>
+
+    <?php
+     $relatedPrograms = get_field('related_programs');
+     foreach($related_programs as $program) {
+      echo get_the_title($program);
+     }
+    ?>
    </div>
 <?php }
 get_footer();
