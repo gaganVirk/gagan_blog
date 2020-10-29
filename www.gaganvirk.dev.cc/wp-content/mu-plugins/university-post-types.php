@@ -2,7 +2,7 @@
 function book_post_types() {
 	// Event post type
 	register_post_type('book', array(
-	  //'show_in_rest' => true,
+	  'show_in_rest' => true,
 	  'supports' => array('title', 'editor', 'thumbnail'),
 	  'rewrite'=> array('slug' => 'books'),
 	  'has_archive' => true,

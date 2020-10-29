@@ -19,9 +19,9 @@
                 ?> -->
               
                 <ul>
-                  <li><a href="<?php echo site_url('/about-us') ?>">About Me</a></li>
-                  <li><a href="#">Programs</a></li>
-                  <li><a href="#">Events</a></li>
+                  <li><a href="<?php echo site_url('/contact-me') ?>">Contact Me</a></li>
+                  <li><a href="<?php echo site_url('/projects') ?>">Projects</a></li>
+                  <li><a href="<?php echo site_url('/certificates') ?>">Certificates</a></li>
                   <li><a href="#">Campuses</a></li>
                 </ul> 
               </nav>
@@ -37,9 +37,8 @@
                 ?> -->
                 
                 <ul>
-                  <li><a href="#">Legal</a></li>
-                  <li><a href="<?php echo site_url('/privacy-policy') ?>">Privacy</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
+                  <li><a href="<?php echo site_url('/books') ?>">Books</a></li>
                 </ul> 
               </nav>
             </div>
@@ -50,19 +49,19 @@
             <nav>
               <ul class="min-list social-icons-list group">
                 <li>
-                  <a href="#" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/deep.virk111/" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href="#" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="https://twitter.com/Gagan0711" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href="#" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                  <a href="https://www.youtube.com/watch?v=EKvHQc3QEow&list=PL19E79A0638C8D449" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href="#" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="https://www.linkedin.com/in/gagan-virk-0618974a/" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href="#" class="social-color-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href="https://www.instagram.com/deepevirk/" class="social-color-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </nav>
