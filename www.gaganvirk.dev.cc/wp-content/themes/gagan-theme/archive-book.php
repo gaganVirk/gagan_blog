@@ -9,31 +9,36 @@ get_header(); ?>
     <div class="page-banner__content container container--narrow">
       <h1 class="page-banner__title">All Books</h1>
       <div class="page-banner__intro">
-        <p>See what is going on in our world.</p>
+        <p>I've listed my favorite books</p>
       </div>
     </div>  
   </div>
 
- <div class="container container--narrow page-section">
-
+  
+<div class="container">
+  <div class="row align-items-start">
   <?php
   while(have_posts()) {
     the_post(); ?>
-    
-     <div class="event-summary">
-            <div class="container">
-
-            <div class="event-summary__content">
-              <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-              <p><?php echo wp_trim_words(get_the_content(), 18) ?><a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
-            </div>
-s
+    <div class="col-4">
+      <div class="container container--narrow page-section">
+        <div class="event-summary">
+           <div class="event-summary__content">
+            <h5 class="event-summary__title headline headline--tiny">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h5>
+            <p><?php echo wp_trim_words(get_the_content(), 18) ?><a href="<?php the_permalink(); ?>" 
+              class="nu gray">Learn more</a></p>
+          </div>
         </div>
-      </div>
-      
+        </div>
+    </div>
+
+    
   <?php  } ?>
 </div>
-   <?php echo paginate_links(); ?>
+</div>
+<?php echo paginate_links(); ?>
 
    <hr class="section-break">
    

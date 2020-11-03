@@ -3,6 +3,7 @@ import $ from 'jquery';
 class Search {
 	// 1. describe and create/initiate our object
 	constructor() {
+		alert("This is gagan!");
 		this.openButton = $(".js-search-trigger");
 		this.closeButton = $(".search-overlay__close");
 		this.searchOverlay = $(".search-overlay");
