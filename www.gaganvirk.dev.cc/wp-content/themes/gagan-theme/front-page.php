@@ -14,7 +14,8 @@
     <div class="full-width-split group">
       <div class="full-width-split__one">
         <div class="full-width-split__inner">
-                    <h2 class="headline headline--small-plus t-center">Upcoming Projects</h2>
+            <h2 class="headline headline--small-plus t-center">
+              <a href="<?php echo site_url('/projects'); ?>">Upcoming Projects</a></h2>
           <?php
           $today = date('Ymd');
            $homepageProjects = new WP_Query(array(
@@ -84,7 +85,8 @@
            <?php } wp_reset_postdata();
           ?>
 
-          <p class="t-center no-margin"><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
+          <p class="t-center no-margin">
+            <a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
         </div>
       </div>
     </div>     
