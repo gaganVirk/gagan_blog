@@ -55,7 +55,7 @@
                   <a href="https://twitter.com/Gagan0711" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/watch?v=EKvHQc3QEow&list=PL19E79A0638C8D449" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                  <a href="https://www.youtube.com/watch?v=EKvHQc3QEow&list=PL19E79A0638C8D449" class="social-color-github"><i class="fa fa-github" aria-hidden="true"></i></a>
                 </li>
                 <li>
                   <a href="https://www.linkedin.com/in/gagan-virk-0618974a/" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>

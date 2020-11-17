@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <?php wp_head(); ?>
 	</head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<body <?php body_class(); ?>>
 	  <header class="site-header">
       <div class="container">
@@ -21,7 +22,7 @@
               ));
             ?> -->
            <ul>
-              <li <?php if(is_page('projects') or wp_get_post_parent_id(0) == 19) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/projects') ?>">Projects</a></li>
+              <li> <a href="<?php echo site_url('/projects') ?>">Projects</a></li>
               <li><a href="<?php echo site_url('/contact-me') ?>">Contact Me</a></li>
               <li <?php if(get_post_type() == 'book' OR is_page('books')) echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('book'); ?>">Books</a></li>
               <li><a href="<?php echo site_url('/certificates') ?>">Certificates</a></li>
