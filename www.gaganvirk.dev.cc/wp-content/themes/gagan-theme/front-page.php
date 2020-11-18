@@ -15,37 +15,31 @@
       <div class="full-width-split__one">
         <div class="full-width-split__inner">
             <h2 class="headline headline--small-plus t-center">
-              <a href="<?php echo site_url('/projects'); ?>">Upcoming Projects</a></h2>
+              <a href="<?php echo site_url('/books'); ?>">Book Reviews</a></h2>
           <?php
           $today = date('Ymd');
-           $homepageProjects = new WP_Query(array(
+           $homepageBooks = new WP_Query(array(
             'posts_per_page' => 2,
-            'post_type' => 'project',
-            'meta_key' => 'project_date',
-            'orderby' => 'meta_value_num',
-            'order' => 'ASC',
-            'meta_query' => array(
-              array(
-                'key' => 'project_date',
-                'compare' => '>=',
-                'value' => $today,
-                'type' => 'numeric'
-              )
-            )));
+            'post_type' => 'book',
+            'order' => 'ASC'
+            ));
 
-           while ($homepageProjects->have_posts()) {
-             $homepageProjects->the_post(); ?>
+
+           while ($homepageBooks->have_posts()) {
+             $homepageBooks->the_post(); ?>
             
             <div class="event-summary">
-            <a class="event-summary__date t-center" href="#">
-              <span class="event-summary__month"><?php 
-               $projectDate = new DateTime(get_field('project_date'));
-               echo $projectDate->format('M')
-              ?></span>
+            <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
+              <span class="event-summary__month">
+                <?php $projectDate = new DateTime(get_field('book_date'));
+               echo $projectDate->format('M')?>
+               </span>
               <span class="event-summary__day"><?php echo $projectDate->format('d') ?></span>
             </a>
             <div class="event-summary__content">
-              <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+              <h5 class="event-summary__title headline headline--tiny">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h5>
               <p><?php if(has_excerpt()) {
                  echo get_the_excerpt();
               } else { 
@@ -55,7 +49,12 @@
           </div>
            <?php } ?>
 
-          <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('project'); ?>" class="btn btn--blue">View All Projects</a></p>
+
+          <p class="t-center no-margin">
+            <a href="<?php echo get_post_type_archive_link('book'); ?>" class="btn btn--blue">
+            View All Book Reviews
+            </a>
+          </p>
         </div>
       </div>
       <div class="full-width-split__two">
@@ -69,12 +68,15 @@
            while($homepagePosts->have_posts()) {
             $homepagePosts->the_post(); ?>
              <div class="event-summary">
-            <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
+            <a class="event-summary__date event-summary__date--beige t-center" 
+            href="<?php the_permalink(); ?>">
               <span class="event-summary__month"><?php the_time('M') ?></span>
               <span class="event-summary__day"><?php the_time('d') ?></span>
             </a>
             <div class="event-summary__content">
-              <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+              <h5 class="event-summary__title headline headline--tiny">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h5>
               <p><?php if(has_excerpt()) {
                  echo get_the_excerpt();
               } else { 
@@ -82,8 +84,7 @@
               }?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
             </div>
           </div>
-           <?php } wp_reset_postdata();
-          ?>
+           <?php } wp_reset_postdata(); ?>
 
           <p class="t-center no-margin">
             <a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>

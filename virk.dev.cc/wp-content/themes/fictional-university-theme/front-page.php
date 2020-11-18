@@ -28,8 +28,7 @@
                 'compare' => '>=',
                 'value' => $today,
                 'type' => 'numeric'
-              )
-            )));
+              ))));
 
            while ($homepageEvents->have_posts()) {
              $homepageEvents->the_post(); ?>

@@ -1,0 +1,6 @@
+body {
+	background-color: red !important;
+}
+.col-sm {
+	border: 5px solid red !important;
+}
